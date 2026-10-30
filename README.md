@@ -23,7 +23,7 @@ It also generates an acknowledgement draft for staff review. The workflow does n
 7. **Record creation:** Validated results and the acknowledgement draft are stored in Airtable.
 
 ### Workflow Overview
-![Workflow Overview](docs/images/workflow-overview.png)
+![Workflow Overview](docs/images/workflow-canvas.png)
 
 ## Design Decisions and Safeguards
 
@@ -72,7 +72,7 @@ Create an Airtable table with the following fields. Field names and select optio
 ## Setup
 
 1. Create an Airtable base and table using the schema above.
-2. Import `(repair-request-organizer.json)` into n8n.
+2. Import `!(repair-request-organizer.json)` into n8n.
 3. Configure your own OpenAI credentials in the **Classify Request** node.
 4. Configure your Airtable credentials in the **Create Request** node.
 5. Replace the Airtable base and table placeholders with your own IDs.
