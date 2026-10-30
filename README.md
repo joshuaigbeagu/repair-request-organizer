@@ -105,12 +105,13 @@ The exported workflow uses `gpt-5-mini`. Credentials and instance-specific ident
 
 ```text
 repair-request-organizer/
-├── workflow/
-│   └── repair-request-organizer.json
 ├── docs/
 │   └── images/
-│       ├── workflow-canvas.png
-│       └── airtable-record.png
+│       ├── airtable-request-example1.png
+│       └── airtable-request-example2.png
+│       └── workflow-canvas.png
+├── workflow/
+│   └── repair-request-organizer.json
 └── README.md
 ```
 
