@@ -22,6 +22,9 @@ It also generates an acknowledgement draft for staff review. The workflow does n
 6. **Fallback handling:** Invalid AI output is replaced with a fallback classification and a record marked for human review.
 7. **Record creation:** Validated results and the acknowledgement draft are stored in Airtable.
 
+### Workflow Overview
+![Workflow Overview](docs/images/workflow-overview.png)
+
 ## Design Decisions and Safeguards
 
 - **Untrusted customer input:** The AI instructions treat submitted text as data, not instructions. Suspected prompt injection is flagged for human review.
@@ -55,7 +58,10 @@ Create an Airtable table with the following fields. Field names and select optio
 | Submitted At | Date/time or text |
 | Status | Single select: New, Contacted, Booked, Closed, Cancelled |
 
-`Needs Review?` is stored as the text `Yes` or `No`.
+`Needs Review?` is stored as the text `Yes` or `No`
+### Airtable Request Example
+![Airtable Request Example](docs/images/airtable-request-example1.png)
+![Airtable Request Example](docs/images/airtable-request-example2.png)
 
 ## Technology Stack
 
@@ -92,6 +98,8 @@ The exported workflow uses `gpt-5-mini`. Credentials and instance-specific ident
 - **No duplicate detection:** Duplicate-submission prevention is not implemented in this workflow.
 - **Limited contact validation:** Basic input checks do not establish whether a phone number or email address is genuine or reachable.
 - **No automated customer communication:** Acknowledgement drafts require staff review and manual sending.
+
+  
 
 ## Repository Structure
 
